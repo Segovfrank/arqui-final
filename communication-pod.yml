@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: communication-pod
+  labels:
+    name: communication-pod
+    app: tacos-app
+
+spec:
+  containers:
+  - name: communication
+    image: segov/communication-service
+    ports:
+    - containerPort: 3001

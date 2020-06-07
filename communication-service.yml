@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: communication-service
+  labels:
+    name: communication-service
+    app: tacos-app
+
+spec:
+  ports:
+  - port: 3001
+    targetPort: 3001
+  selector:
+    name: communication-pod
+    app: tacos-app

@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: database-pod
+  labels:
+    name: database-pod
+    app: tacos-app
+
+spec:
+  containers:
+  - name: database
+    image: segov/database-service
+    ports:
+    - containerPort: 3002

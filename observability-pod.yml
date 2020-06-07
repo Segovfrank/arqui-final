@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: observability-pod
+  labels:
+    name: observability-pod
+    app: tacos-app
+
+spec:
+  containers:
+  - name: observability
+    image: segov/observability-service
+    ports:
+    - containerPort: 3003
