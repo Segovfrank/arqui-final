@@ -9,6 +9,7 @@ metadata:
 spec:
   containers:
   - name: communication
-    image: segov/communication-service
+    image: segov/communication-service:latest
+    imagePullPolicy: "Always"
     ports:
     - containerPort: 3001

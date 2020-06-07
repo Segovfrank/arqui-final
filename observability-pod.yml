@@ -9,6 +9,7 @@ metadata:
 spec:
   containers:
   - name: observability
-    image: segov/observability-service
+    image: segov/observability-service:latest
+    imagePullPolicy: "Always"
     ports:
     - containerPort: 3003
