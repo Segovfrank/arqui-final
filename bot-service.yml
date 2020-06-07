@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: bot-service
+  labels:
+    name: bot-service
+    app: tacos-app
+
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 3000
+    targetPort: 3000
+  selector:
+    name: bot-pod
+    app: tacos-app
