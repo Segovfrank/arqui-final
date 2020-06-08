@@ -9,6 +9,7 @@ metadata:
 spec:
   containers:
   - name: database
-    image: segov/database-service
+    image: segov/database-service:latest
+    imagePullPolicy: "Always"
     ports:
     - containerPort: 3002
